@@ -23,4 +23,15 @@ jobs:
       - name: Run Playwright tests
         env:
           BASE_URL: ${{ secrets.BASE_URL }}
-        run: docker run --rm -e BASE_URL=${{ secrets.BASE_URL }} pw-tests
+        run: |
+          docker run --rm \
+            -e BASE_URL=${{ secrets.BASE_URL }} \
+            -v $(pwd)/playwright-report:/app/playwright-report \
+            pw-tests npx playwright test --reporter=html
+
+      - name: Upload Playwright HTML report
+        if: always() # supaya report tetap upload walau test fail
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-html-report
+          path: playwright-report
