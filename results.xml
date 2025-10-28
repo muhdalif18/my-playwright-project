@@ -1,0 +1,11 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="6.7913760000000005">
+<testsuite name="example.spec.ts" timestamp="2025-10-28T09:58:53.018Z" hostname="chromium" tests="1" failures="0" skipped="0" time="4.548" errors="0">
+<testcase name="homepage has title" classname="example.spec.ts" time="4.548">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\example-homepage-has-title-chromium\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

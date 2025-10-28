@@ -1,5 +1,11 @@
 import { defineConfig, devices } from "@playwright/test";
 
+import dotenv from "dotenv";
+import path from "path";
+
+// load .env file
+dotenv.config({ path: path.resolve(__dirname, ".env") });
+
 // ambil BASE_URL dari environment
 const baseUrl = process.env.BASE_URL;
 
