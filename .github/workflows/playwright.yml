@@ -20,5 +20,9 @@ jobs:
       - name: Build Docker image
         run: docker build -t pw-tests .
 
-      - name: Run Playwright tests
-        run: docker run --rm pw-tests
+       - name: Run Playwright tests
+        env:
+          BASE_URL: ${{ secrets.BASE_URL }}
+        run: docker run --rm -e BASE_URL=${{ secrets.BASE_URL }} pw-tests
+
+        
