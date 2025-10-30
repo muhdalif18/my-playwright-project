@@ -1,9 +1,53 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="6.7913760000000005">
-<testsuite name="example.spec.ts" timestamp="2025-10-28T09:58:53.018Z" hostname="chromium" tests="1" failures="0" skipped="0" time="4.548" errors="0">
-<testcase name="homepage has title" classname="example.spec.ts" time="4.548">
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="624.644134">
+<testsuite name="e2e\01_dloa\TC001_createdloa.spec.ts" timestamp="2025-10-29T06:46:55.205Z" hostname="firefox" tests="1" failures="1" skipped="0" time="610.389" errors="0">
+<testcase name="DLOA Test Script" classname="e2e\01_dloa\TC001_createdloa.spec.ts" time="610.389">
+<failure message="TC001_createdloa.spec.ts:9:5 DLOA Test Script" type="FAILURE">
+<![CDATA[  [firefox] › e2e\01_dloa\TC001_createdloa.spec.ts:9:5 › DLOA Test Script ──────────────────────────
+
+    Test timeout of 600000ms exceeded.
+
+    Error: locator.click: Test timeout of 600000ms exceeded.
+    Call log:
+      - waiting for locator('[id="_scCreateManualSourcing_WAR_NGePportlet_:form:supplierId:supplierIdlovLink"]')
+
+
+      48 |       '[id="_scCreateManualSourcing_WAR_NGePportlet_:form:supplierId:supplierIdlovLink"]'
+      49 |     )
+    > 50 |     .click();
+         |      ^
+      51 |   await page
+      52 |     .locator(
+      53 |       '[id^="_scCreateManualSourcing_WAR_NGePportlet_:form:"][id$="_label"]'
+        at D:\SoftwareTesting\my-playwright-project\tests\e2e\01_dloa\TC001_createdloa.spec.ts:50:6
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\e2e-01_dloa-TC001_createdloa-DLOA-Test-Script-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\e2e-01_dloa-TC001_createdloa-DLOA-Test-Script-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\e2e-01_dloa-TC001_createdloa-DLOA-Test-Script-firefox\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\e2e-01_dloa-TC001_createdloa-DLOA-Test-Script-firefox\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\e2e-01_dloa-TC001_createdloa-DLOA-Test-Script-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
 <system-out>
 <![CDATA[
-[[ATTACHMENT|test-results\example-homepage-has-title-chromium\trace.zip]]
+[[ATTACHMENT|test-results\e2e-01_dloa-TC001_createdloa-DLOA-Test-Script-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\e2e-01_dloa-TC001_createdloa-DLOA-Test-Script-firefox\video.webm]]
+
+[[ATTACHMENT|test-results\e2e-01_dloa-TC001_createdloa-DLOA-Test-Script-firefox\error-context.md]]
+
+[[ATTACHMENT|test-results\e2e-01_dloa-TC001_createdloa-DLOA-Test-Script-firefox\trace.zip]]
 ]]>
 </system-out>
 </testcase>
